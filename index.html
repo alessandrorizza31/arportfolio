@@ -22,19 +22,19 @@
 
 <div style="background: #0A0B0C; color: #F2F1EF; font-family: 'Forum', serif; overflow: hidden; min-height: 100vh; max-width: 1200px; margin: 0 auto;">
 
-        <div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px 40px; font-family: 'Archivo', sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid #1F2224;">
-          <span style="color: #F2F1EF; font-family: 'Archivo', sans-serif; letter-spacing: 0.5px">Alessandro Rizza</span>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 20px clamp(18px, 4vw, 40px); font-family: 'Archivo', sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid #1F2224;">
+          <span style="color: #F2F1EF; font-family: 'Archivo', sans-serif; letter-spacing: 0.5px; flex: 1 1 auto;">Alessandro Rizza</span>
           <img src="assets/logo-white.png" alt="Alessandro Rizza" style="height: 22px; width: auto; display: block;">
-          <div style="display: flex; gap: 28px; color: #8B9094; justify-content: flex-end;">
+          <div style="display: flex; gap: 22px; color: #8B9094; justify-content: flex-end; flex: 1 1 auto;">
             <span style="color: #F2F1EF;">Work</span>
             <a href="about.html" style="color: #8B9094;" style-hover="color: #F2F1EF;">About</a>
           </div>
         </div>
 
-        <div style="position: relative; height: min(620px, 72vh); min-height: 420px; overflow: hidden;">
+        <div style="position: relative; height: min(620px, 78vh); min-height: 380px; overflow: hidden;">
           <video id="heroVideo" src="uploads/video_files-1788966903616-as9e-892a2905.mp4" autoplay="" loop="" muted="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.62;"></video>
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,12,0.55) 0%, rgba(10,11,12,0.1) 45%, rgba(10,11,12,0.92) 100%);"></div>
-          <div style="position: absolute; inset: 0; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="position: absolute; inset: 0; padding: clamp(18px, 4vw, 40px); display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
             <div style="display: flex; justify-content: flex-end;">
               <div style="font-family: 'Archivo', sans-serif; font-size: 13px; line-height: 1.35; letter-spacing: 0.04em; color: #C9CDCF; text-align: right;">
                 <div>Visual &amp; Motion Designer</div>
@@ -43,9 +43,9 @@
               </div>
             </div>
             <div style="display: flex; flex-direction: column; gap: 14px;">
-              <h1 style="margin: 0; font-size: 91px; line-height: 0.8; font-weight: 400; letter-spacing: -0.045em; text-wrap: pretty; text-align: left">Motion for exhibitions<br>and brands</h1>
+              <h1 style="margin: 0; font-size: clamp(38px, 8.4vw, 91px); line-height: 0.85; font-weight: 400; letter-spacing: -0.045em; text-wrap: pretty; text-align: left">Motion for exhibitions<br>and brands</h1>
               <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
-                <p style="margin: 0; max-width: 460px; font-family: 'Archivo', sans-serif; font-size: 14px; line-height: 1.7; color: #C9CDCF;">Two years designing motion systems and visual identities for museums<br>and cultural institutions. Researcher and freelance designer.</p>
+                <p style="margin: 0; max-width: 460px; font-family: 'Archivo', sans-serif; font-size: 14px; line-height: 1.7; color: #C9CDCF;">Two years designing motion systems and visual identities for museums and cultural institutions. Researcher and freelance designer.</p>
               </div>
             </div>
           </div>
@@ -57,12 +57,12 @@
           </div>
         </div>
 
-        <div style="padding: 64px 40px 40px; display: flex; flex-direction: column; gap: 28px;">
+        <div style="padding: clamp(40px, 7vw, 64px) clamp(18px, 4vw, 40px) 40px; display: flex; flex-direction: column; gap: 28px;">
           <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Archivo', sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8B9094;">
             <span>Selected work</span>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px;">
             <div data-card="1" style="display: flex; flex-direction: column; gap: 14px; cursor: pointer;">
               <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #121416;">
                 <video src="uploads/biennale-cover-13cde54b.mp4" autoplay="" loop="" muted="{{ true }}" playsinline="" style="width: 100%; height: 100%; object-fit: cover;"></video>
@@ -105,50 +105,50 @@
           </div>
 
           <div id="workList" style="display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid #1F2224;">
-            <div data-row="1" data-images="uploads/DSCF2682.jpg,uploads/DSCF2697.jpg,uploads/DSCF2698.jpg,uploads/DSCF2707.jpg,uploads/DSCF2710.jpg" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 0.5fr) 62px minmax(110px, 0.38fr); align-items: start; gap: 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <div style="display: flex; flex-direction: column;">
-                <span style="font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Poster for Speed — Motor Racing from 1900 to 1950</span>
+            <div data-row="1" data-images="uploads/DSCF2682.jpg,uploads/DSCF2697.jpg,uploads/DSCF2698.jpg,uploads/DSCF2707.jpg,uploads/DSCF2710.jpg" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
+              <div style="display: flex; flex-direction: column; flex: 1 1 260px; min-width: 0;">
+                <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Poster for Speed — Motor Racing from 1900 to 1950</span>
                 <div data-row-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
                   <p style="margin: 0; overflow: hidden; max-width: 560px; padding-top: 10px; font-family: 'Archivo', sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">A thesis tracing the origin of the graphic codes used to represent speed, through the visual communication of Italian motor racing in the first half of the twentieth century. Built on archival primary sources — original posters, photographs, documents — alongside bibliography, to contextualize their cultural and artistic impact. Chronological and thematic structure, typography drawn from the period, and throughout the red assigned to Italian racing cars in the 1930s, cut with flashes of light.</p>
                 </div>
               </div>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094; padding-top: 4px;">Master's thesis research</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094; padding-top: 4px;">2026</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; padding-top: 4px;">Research, catalogue</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">Master's thesis research</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Research, catalogue</span>
             </div>
-            <div data-row="1" data-img-width="300" data-images="uploads/DSCF5832.JPG,uploads/DSCF5834.JPG,uploads/DSCF5836.JPG,uploads/DSCF5840.JPG,uploads/DSCF5841.JPG,uploads/DSCF5844.JPG" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 0.5fr) 62px minmax(110px, 0.38fr); align-items: center; gap: 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <span style="font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Made in MiC</span>
+            <div data-row="1" data-img-width="300" data-images="uploads/DSCF5832.JPG,uploads/DSCF5834.JPG,uploads/DSCF5836.JPG,uploads/DSCF5840.JPG,uploads/DSCF5841.JPG,uploads/DSCF5844.JPG" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
+              <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Made in MiC</span>
               <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">Salone del Mobile 2026</span>
               <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right;">Catalogue</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Catalogue</span>
             </div>
-            <div data-row="1" data-img-width="300" data-images="uploads/poster_roma-1975+-3713681b.png,uploads/DSCF2427.jpg,uploads/DSCF2505.jpg,uploads/DSCF2387.jpg,uploads/DSCF2512.jpg,uploads/DSCF2394.jpg" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 0.5fr) 62px minmax(110px, 0.38fr); align-items: start; gap: 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <div style="display: flex; flex-direction: column;">
-                <span style="font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Roma 1975</span>
+            <div data-row="1" data-img-width="300" data-images="uploads/poster_roma-1975+-3713681b.png,uploads/DSCF2427.jpg,uploads/DSCF2505.jpg,uploads/DSCF2387.jpg,uploads/DSCF2512.jpg,uploads/DSCF2394.jpg" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
+              <div style="display: flex; flex-direction: column; flex: 1 1 260px; min-width: 0;">
+                <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Roma 1975</span>
                 <div data-row-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
                   <p style="margin: 0; overflow: hidden; max-width: 560px; padding-top: 10px; font-family: 'Archivo', sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">Visual identity for the photographic exhibition <em>Roma 1975, città, volti e storie nell'anno giubilare</em>, for the Soprintendenza Speciale di Roma and the Drugstore Museum. The graphic line is built on a condensed sans-serif widely used in 1970s Italy. I handled promotional communication — posters and social — and internal graphics: information panels, captions, decorative artifacts. I also designed the exhibition catalogue, published by Scienze e Lettere, which collects the selected photographs and, through critical essays, reconstructs the historical, demoethnoanthropological, political and cultural context of 1970s Rome.</p>
                 </div>
               </div>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094; padding-top: 4px;">Soprintendenza Speciale di Roma</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094; padding-top: 4px;">2025</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; padding-top: 4px;">Identity, catalogue</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">Soprintendenza Speciale di Roma</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">2025</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, catalogue</span>
             </div>
-            <div data-row="1" data-img-width="300" data-images="uploads/IMG_5990-2-cab5f51b.jpg,uploads/SOCIAL-Fashion_at_Iuav-1080X1350.mp4" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 0.5fr) 62px minmax(110px, 0.38fr); align-items: center; gap: 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <span style="font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Fashion at Iuav 2026</span>
+            <div data-row="1" data-img-width="300" data-images="uploads/IMG_5990-2-cab5f51b.jpg,uploads/SOCIAL-Fashion_at_Iuav-1080X1350.mp4" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
+              <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Fashion at Iuav 2026</span>
               <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia</span>
               <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right;">Identity, motion</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, motion</span>
             </div>
-            <div data-row="1" data-img-width="300" data-images="uploads/01-Def-colorato.mp4,uploads/01-4-5.mp4,uploads/03-4-5-rosso.mp4" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 0.5fr) 62px minmax(110px, 0.38fr); align-items: start; gap: 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <div style="display: flex; flex-direction: column;">
-                <span style="font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Design Show</span>
+            <div data-row="1" data-img-width="300" data-images="uploads/01-Def-colorato.mp4,uploads/01-4-5.mp4,uploads/03-4-5-rosso.mp4" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: opacity 0.25s ease, padding-left 0.25s ease;" style-hover="padding-left: 14px;">
+              <div style="display: flex; flex-direction: column; flex: 1 1 260px; min-width: 0;">
+                <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.01em; font-family: 'Forum', serif">Design Show</span>
                 <div data-row-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
                   <p style="margin: 0; overflow: hidden; max-width: 560px; padding-top: 10px; font-family: 'Archivo', sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">Visual identity for two editions of the Design Show at Università Iuav di Venezia, the exhibition where students present the projects completed over the previous semester. Starting from the existing Career Days identity — rigid and modular — we built a new palette with more organic shapes, to represent the greater freedom of design within the university. I also produced the animations for the university's social channels.</p>
                 </div>
               </div>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094; padding-top: 4px;">Università Iuav di Venezia</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094; padding-top: 4px;">2026</span>
-              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; padding-top: 4px;">Identity, motion</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
+              <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, motion</span>
             </div>
           </div>
 
@@ -161,7 +161,7 @@
             <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'Archivo', sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8B9094;">
               <span>Lab — experiments &amp; loops</span>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: start;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 10px; align-items: start;">
               <div style="display: flex; flex-direction: column; gap: 10px;">
                 <video data-src="uploads/video_files-1788966954705-50zf.mp4" preload="none" autoplay="" loop="" muted="{{ true }}" data-lab="1" playsinline="" style="display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; background: #121416; transition: opacity 0.25s ease;" style-hover="opacity: 0.72;"></video>
                 <video data-src="uploads/video_files-1788967067475-7rya.mp4" preload="none" autoplay="" loop="" muted="{{ true }}" data-lab="1" playsinline="" style="display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; background: #121416; transition: opacity 0.25s ease;" style-hover="opacity: 0.72;"></video>
@@ -187,10 +187,10 @@
           </div>
         </div>
 
-        <div style="padding: 40px; border-top: 1px solid #1F2224; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div style="padding: clamp(32px, 6vw, 40px) clamp(18px, 4vw, 40px); border-top: 1px solid #1F2224; display: flex; flex-wrap: wrap; gap: 20px 32px; justify-content: space-between; align-items: flex-end;">
           <div>
             <p style="margin: 0 0 8px; font-family: 'Archivo', sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8B9094;">Get in touch</p>
-            <a href="mailto:alessandro.rizza31@gmail.com" style="font-size: 44px; font-weight: 400; letter-spacing: -0.02em; color: #F2F1EF;">alessandro.rizza31@gmail.com</a>
+            <a href="mailto:alessandro.rizza31@gmail.com" style="font-size: clamp(22px, 5.2vw, 44px); font-weight: 400; letter-spacing: -0.02em; word-break: break-word; color: #F2F1EF;">alessandro.rizza31@gmail.com</a>
           </div>
           <span style="font-family: 'Archivo', sans-serif; font-size: 13.5px; color: #8B9094;">© 2026</span>
         </div>
@@ -236,7 +236,85 @@ class Component extends DCLogic {
     if (v.readyState >= 1) seek();
     else v.addEventListener('loadedmetadata', seek, { once: true });
   }
+  isTouch() {
+    return window.matchMedia && window.matchMedia('(hover: none)').matches;
+  }
+  applyTouchLayout() {
+    if (!this.isTouch()) return true;
+    document.querySelectorAll('[data-row-desc], [data-card-desc]').forEach(d => {
+      d.style.gridTemplateRows = '1fr';
+      d.style.opacity = '1';
+    });
+    const box = document.getElementById('rowPreview');
+    const stack = document.getElementById('imgPreview');
+    if (box) box.style.display = 'none';
+    if (stack) stack.style.display = 'none';
+    this.bindTouchGalleries();
+    return false;
+  }
+  bindTouchGalleries() {
+    document.querySelectorAll('[data-row]').forEach(r => {
+      if (r.dataset.tapBound) return;
+      const imgs = r.getAttribute('data-images');
+      const clip = r.getAttribute('data-preview');
+      const list = imgs ? imgs.split(',') : (clip ? [clip] : []);
+      if (!list.length) return;
+      r.dataset.tapBound = '1';
+      r.style.opacity = '1';
+      r.style.cursor = 'pointer';
+
+      const gal = document.createElement('div');
+      gal.style.cssText = 'flex: 1 1 100%; display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;';
+      const strip = document.createElement('div');
+      strip.style.cssText = 'overflow-x: auto; overflow-y: hidden; display: flex; gap: 8px; padding-top: 14px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;';
+      list.forEach(src => {
+        const st = 'height: 210px; width: auto; flex: 0 0 auto; scroll-snap-align: start; background: #121416; display: block;';
+        let el;
+        if (/\.(mp4|webm|mov)$/i.test(src)) {
+          el = document.createElement('video');
+          el.muted = true; el.loop = true; el.playsInline = true; el.preload = 'none';
+          el.setAttribute('playsinline', '');
+          el.dataset.src = src;
+        } else {
+          el = document.createElement('img');
+          el.loading = 'lazy';
+          el.dataset.src = src;
+        }
+        el.style.cssText = st;
+        strip.appendChild(el);
+      });
+      gal.appendChild(strip);
+      r.appendChild(gal);
+
+      const hint = document.createElement('span');
+      hint.textContent = 'Tap to see';
+      hint.style.cssText = "font-family: 'Archivo', sans-serif; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4FA6C7; flex: 1 1 100%;";
+      r.insertBefore(hint, gal);
+
+      r.addEventListener('click', e => {
+        if (e.target.closest('a') || e.target.closest('[data-row] div[style*="overflow-x"]')) return;
+        const open = gal.dataset.open === '1';
+        if (open) {
+          gal.dataset.open = '0';
+          gal.style.gridTemplateRows = '0fr';
+          gal.style.opacity = '0';
+          hint.textContent = 'Tap to see';
+          strip.querySelectorAll('video').forEach(v => v.pause());
+        } else {
+          gal.dataset.open = '1';
+          gal.style.gridTemplateRows = '1fr';
+          gal.style.opacity = '1';
+          hint.textContent = 'Tap to close';
+          strip.querySelectorAll('[data-src]').forEach(el => {
+            if (!el.src) el.src = el.dataset.src;
+            if (el.tagName === 'VIDEO') el.play().catch(() => {});
+          });
+        }
+      });
+    });
+  }
   bindRowPreview() {
+    if (!this.applyTouchLayout()) return;
     const box = document.getElementById('rowPreview');
     const vid = document.getElementById('rowPreviewVideo');
     const stack = document.getElementById('imgPreview');
@@ -349,6 +427,7 @@ class Component extends DCLogic {
     }
   }
   bindCards() {
+    if (this.isTouch()) { this.applyTouchLayout(); return; }
     document.querySelectorAll('[data-card]').forEach(c => {
       if (c.dataset.cardBound) return;
       c.dataset.cardBound = '1';
