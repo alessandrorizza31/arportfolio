@@ -27,7 +27,7 @@
           <img src="assets/logo-white.png" alt="Alessandro Rizza" style="height: 22px; width: auto; display: block;">
           <div style="display: flex; gap: 22px; color: #8B9094; justify-content: flex-end; flex: 1 1 auto;">
             <span style="color: #F2F1EF;">Work</span>
-            <a href="about.html" style="color: #8B9094;" style-hover="color: #F2F1EF;">About</a>
+            <a href="About.dc.html" style="color: #8B9094;" style-hover="color: #F2F1EF;">About</a>
           </div>
         </div>
 
@@ -241,9 +241,13 @@ class Component extends DCLogic {
   }
   applyTouchLayout() {
     if (!this.isTouch()) return true;
-    document.querySelectorAll('[data-row-desc], [data-card-desc]').forEach(d => {
+    document.querySelectorAll('[data-card-desc]').forEach(d => {
       d.style.gridTemplateRows = '1fr';
       d.style.opacity = '1';
+    });
+    document.querySelectorAll('[data-row-desc]').forEach(d => {
+      d.style.gridTemplateRows = '0fr';
+      d.style.opacity = '0';
     });
     const box = document.getElementById('rowPreview');
     const stack = document.getElementById('imgPreview');
@@ -260,15 +264,17 @@ class Component extends DCLogic {
       const list = imgs ? imgs.split(',') : (clip ? [clip] : []);
       if (!list.length) return;
       r.dataset.tapBound = '1';
+      const rowDesc = r.querySelector('[data-row-desc]');
       r.style.opacity = '1';
       r.style.cursor = 'pointer';
 
       const gal = document.createElement('div');
       gal.style.cssText = 'flex: 1 1 100%; display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;';
       const strip = document.createElement('div');
+      strip.dataset.strip = '1';
       strip.style.cssText = 'overflow-x: auto; overflow-y: hidden; display: flex; gap: 8px; padding-top: 14px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;';
       list.forEach(src => {
-        const st = 'height: 210px; width: auto; flex: 0 0 auto; scroll-snap-align: start; background: #121416; display: block;';
+        const st = 'height: 210px; width: auto; min-width: 140px; flex: 0 0 auto; scroll-snap-align: start; background: #121416; display: block;';
         let el;
         if (/\.(mp4|webm|mov)$/i.test(src)) {
           el = document.createElement('video');
@@ -292,19 +298,21 @@ class Component extends DCLogic {
       r.insertBefore(hint, gal);
 
       r.addEventListener('click', e => {
-        if (e.target.closest('a') || e.target.closest('[data-row] div[style*="overflow-x"]')) return;
+        if (e.target.closest('a') || e.target.closest('[data-strip]')) return;
         const open = gal.dataset.open === '1';
         if (open) {
           gal.dataset.open = '0';
           gal.style.gridTemplateRows = '0fr';
           gal.style.opacity = '0';
           hint.textContent = 'Tap to see';
+          if (rowDesc) { rowDesc.style.gridTemplateRows = '0fr'; rowDesc.style.opacity = '0'; }
           strip.querySelectorAll('video').forEach(v => v.pause());
         } else {
           gal.dataset.open = '1';
           gal.style.gridTemplateRows = '1fr';
           gal.style.opacity = '1';
           hint.textContent = 'Tap to close';
+          if (rowDesc) { rowDesc.style.gridTemplateRows = '1fr'; rowDesc.style.opacity = '1'; }
           strip.querySelectorAll('[data-src]').forEach(el => {
             if (!el.src) el.src = el.dataset.src;
             if (el.tagName === 'VIDEO') el.play().catch(() => {});
