@@ -546,10 +546,33 @@ class Component extends DCLogic {
     }
     h.style.fontSize = (Math.floor(lo * 10) / 10) + 'px';
     this._heroW = h.clientWidth;
+    this._heroWords = null;
+  }
+  measureHeroWords() {
+    // Positions of each word of the title, relative to the canvas, so the canvas can paint them itself.
+    const h = document.getElementById('heroTitle');
+    const c = this._heroCv;
+    if (!h || !c) return null;
+    const cr = c.getBoundingClientRect();
+    const cs = getComputedStyle(h);
+    const words = [];
+    const walker = document.createTreeWalker(h, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = walker.nextNode())) {
+      const re = /\S+/g; let m;
+      while ((m = re.exec(n.textContent))) {
+        const r = document.createRange();
+        r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length);
+        const rc = r.getClientRects()[0];
+        if (rc) words.push({ t: m[0], x: rc.left - cr.left, top: rc.top - cr.top, h: rc.height });
+      }
+    }
+    return { words, font: cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily, ls: parseFloat(cs.letterSpacing) || 0 };
   }
   heroCanvas() {
-    // Mobile browsers (iOS Safari above all) do not blend text over a playing <video>:
-    // mirror the hero video into a canvas, which blending does work over.
+    // Mobile browsers (iOS Safari above all) do not blend text over a playing <video>,
+    // and not reliably over a canvas either: on touch devices the canvas paints the video
+    // and then the title itself with a 'difference' composite, which works everywhere.
     if (!this.isTouch() || this._heroCv) return;
     const v = document.getElementById('heroVideo');
     if (!v || !v.parentNode) return;
@@ -565,13 +588,36 @@ class Component extends DCLogic {
       const w = Math.round(c.clientWidth * dpr), h = Math.round(c.clientHeight * dpr);
       if (w && h && (c.width !== w || c.height !== h)) { c.width = w; c.height = h; }
       const cur = this._heroActive || v;
+      let drew = false;
       if (cur.readyState >= 2 && cur.videoWidth && c.width) {
         const s = Math.max(c.width / cur.videoWidth, c.height / cur.videoHeight);
         const dw = cur.videoWidth * s, dh = cur.videoHeight * s;
-        try { ctx.drawImage(cur, (c.width - dw) / 2, (c.height - dh) / 2, dw, dh); } catch (e) {}
+        try { ctx.drawImage(cur, (c.width - dw) / 2, (c.height - dh) / 2, dw, dh); drew = true; } catch (e) {}
+      }
+      const now = performance.now();
+      if (!this._heroWords || now - (this._heroWordsAt || 0) > 1000) { this._heroWords = this.measureHeroWords(); this._heroWordsAt = now; }
+      const hw = this._heroWords;
+      if (drew && hw && hw.words.length) {
+        ctx.save();
+        ctx.scale(dpr, dpr);
+        ctx.globalCompositeOperation = 'difference';
+        ctx.fillStyle = '#ffffff';
+        ctx.font = hw.font;
+        ctx.textBaseline = 'alphabetic';
+        if ('letterSpacing' in ctx) ctx.letterSpacing = hw.ls + 'px';
+        const mm = ctx.measureText('Hg');
+        const asc = mm.fontBoundingBoxAscent || mm.actualBoundingBoxAscent || 0;
+        const desc = mm.fontBoundingBoxDescent || mm.actualBoundingBoxDescent || 0;
+        hw.words.forEach(wd => {
+          const base = wd.top + (wd.h - (asc + desc)) / 2 + asc;
+          ctx.fillText(wd.t, wd.x, base);
+        });
+        ctx.restore();
       }
       this._heroRaf = requestAnimationFrame(draw);
     };
+    const ht = document.getElementById('heroTitle');
+    if (ht) { ht.style.color = 'transparent'; ht.style.mixBlendMode = 'normal'; }
     draw();
   }
   componentDidMount() {
