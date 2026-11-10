@@ -23,15 +23,15 @@
 
 <div style="background: #0A0B0C; color: #F2F1EF; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: hidden; min-height: 100vh; width: 100%; position: relative; line-height: 1.4;">
 
-        <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; mix-blend-mode: difference; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px clamp(18px, 4vw, 40px); background: transparent; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">
+        <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; mix-blend-mode: difference; -webkit-transform: translateZ(0); transform: translateZ(0); display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px clamp(18px, 4vw, 40px); background: transparent; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">
           <img src="assets/logo-white.png" alt="Alessandro Rizza" style="height: 28px; width: auto; display: block;">
           <a href="about.html" style="color: #F2F1EF;" style-hover="color: #C9CDCF;">About</a>
         </div>
 
-        <div style="position: relative; height: calc(100svh - 64px); min-height: 480px; overflow: hidden;">
-          <video id="heroVideo" src="uploads/video_files-1788966903616-as9e-892a2905.mp4" autoplay="" loop="" muted="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video>
+        <div style="position: relative; height: calc(100svh - 64px); min-height: 480px; overflow: hidden; isolation: isolate;">
+          <video id="heroVideo" src="uploads/video_files-1788966903616-as9e-892a2905.mp4" autoplay="" loop="" muted="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; -webkit-transform: translateZ(0); transform: translateZ(0);"></video>
           <div style="position: absolute; inset: 0; padding: clamp(84px, 11vw, 100px) clamp(18px, 4vw, 40px) clamp(18px, 4vw, 40px); display: flex; flex-direction: column; justify-content: flex-end; gap: 24px;">
-            <h1 style="margin: 0; font-size: clamp(28px, 4.1vw, 62px); line-height: 1; font-weight: 500; letter-spacing: -0.035em; text-wrap: balance; text-align: left; color: #FFFFFF; mix-blend-mode: difference;">I'm Alessandro, a visual &amp; motion designer based <span style="white-space: nowrap;">in Venice</span>, crafting motion for exhibitions and brands.</h1>
+            <h1 id="heroTitle" style="margin: 0; width: 100%; font-size: clamp(30px, 4.6vw, 96px); line-height: 0.98; font-weight: 700; letter-spacing: -0.035em; text-wrap: wrap; text-align: left; -webkit-hyphens: none; hyphens: none; color: #FFFFFF; mix-blend-mode: difference;">I'm Alessandro, a visual &amp; motion designer based <span style="white-space: nowrap;">in Venice</span>, crafting motion for exhibitions and brands.</h1>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
         </div>
 
         <div id="selectedWork" style="scroll-margin-top: 72px; padding: clamp(40px, 7vw, 64px) clamp(18px, 4vw, 40px) 40px; display: flex; flex-direction: column; gap: 28px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
             <h2 style="margin: 0; font: inherit;">Selected work</h2>
           </div>
 
@@ -142,7 +142,7 @@
             <video id="rowPreviewVideo" loop="" muted="{{ true }}" playsinline="" style="width: 100%; height: auto; display: block;"></video>
           </div>
           <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 18px;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
               <h2 style="margin: 0; font: inherit;">Lab</h2>
             </div>
             <div id="labGrid" style="display: flex; align-items: flex-start; gap: 10px;">
@@ -500,11 +500,36 @@ class Component extends DCLogic {
       this._io.observe(v);
     });
   }
+  fitHero() {
+    const h = document.getElementById('heroTitle');
+    if (!h || !h.clientWidth) return;
+    const lines = window.innerWidth < 700 ? 4 : 2;
+    const rows = () => {
+      const lh = parseFloat(getComputedStyle(h).lineHeight) || 1;
+      return Math.round(h.offsetHeight / lh);
+    };
+    let lo = 16, hi = 260;
+    for (let i = 0; i < 20; i++) {
+      const mid = (lo + hi) / 2;
+      h.style.fontSize = mid + 'px';
+      if (rows() <= lines && h.scrollWidth <= h.clientWidth + 1) lo = mid; else hi = mid;
+    }
+    h.style.fontSize = (Math.floor(lo * 10) / 10) + 'px';
+    this._heroW = h.clientWidth;
+  }
   componentDidMount() {
+    this.fitHero();
+    const ht = document.getElementById('heroTitle');
+    if (ht && 'ResizeObserver' in window) {
+      this._ro = new ResizeObserver(() => { const el = document.getElementById('heroTitle'); if (el && el.clientWidth !== this._heroW) this.fitHero(); });
+      this._ro.observe(ht.parentElement);
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.fitHero());
+    setTimeout(() => this.fitHero(), 600);
     this.layoutLab();
     this._onResize = () => {
       clearTimeout(this._rz);
-      this._rz = setTimeout(() => this.layoutLab(), 120);
+      this._rz = setTimeout(() => { this.layoutLab(); this.fitHero(); }, 120);
     };
     window.addEventListener('resize', this._onResize);
     this.bindLazy();
