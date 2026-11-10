@@ -1,6 +1,6 @@
 # Alessandro Rizza — Portfolio
 
-Visual &amp; Motion Designer. Venice, Italy.
+Visual & Motion Designer. Venice, Italy.
 
 ## Pubblicare su GitHub Pages
 
@@ -10,8 +10,10 @@ Visual &amp; Motion Designer. Venice, Italy.
 
 ## Struttura
 
-- `index.html` — Work (home)
+- `index.html` — Home
 - `about.html` — About
 - `support.js` — runtime necessario a entrambe le pagine
-- `assets/` — font Forum, logo
+- `assets/` — logo, favicon
 - `uploads/` — video e immagini
+
+Font: Neue Haas Grotesk Display via Adobe Fonts (web project yui0tba).
