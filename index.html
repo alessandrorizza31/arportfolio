@@ -14,16 +14,17 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="https://use.typekit.net/yui0tba.css">
 <style>
-  body { margin: 0; background: #0A0B0C; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: #0A0B0C; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .t-display { font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   a { color: #4FA6C7; text-decoration: none; }
   a:hover { color: #8FD0E4; }
   @keyframes marq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 </style>
 </helmet>
 
-<div style="background: #0A0B0C; color: #F2F1EF; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: hidden; min-height: 100vh; width: 100%; position: relative; line-height: 1.4;">
+<div style="background: #0A0B0C; color: #F2F1EF; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: hidden; min-height: 100vh; width: 100%; position: relative; line-height: 1.4;">
 
-        <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; mix-blend-mode: difference; -webkit-transform: translateZ(0); transform: translateZ(0); display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px clamp(18px, 4vw, 40px); background: transparent; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">
+        <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; mix-blend-mode: difference; -webkit-transform: translateZ(0); transform: translateZ(0); display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px clamp(18px, 4vw, 40px); background: transparent; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;">
           <img src="assets/logo-white.png" alt="Alessandro Rizza" style="height: 28px; width: auto; display: block;">
           <a href="about.html" style="color: #F2F1EF;" style-hover="color: #C9CDCF;">About</a>
         </div>
@@ -31,18 +32,18 @@
         <div style="position: relative; height: calc(100svh - 64px); min-height: 480px; overflow: hidden; isolation: isolate;">
           <video id="heroVideo" src="uploads/video_files-1788966903616-as9e-892a2905.mp4" autoplay="" loop="" muted="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; -webkit-transform: translateZ(0); transform: translateZ(0);"></video>
           <div style="position: absolute; inset: 0; padding: clamp(84px, 11vw, 100px) clamp(18px, 4vw, 40px) clamp(18px, 4vw, 40px); display: flex; flex-direction: column; justify-content: flex-end; gap: 24px;">
-            <h1 id="heroTitle" style="margin: 0; width: 100%; font-size: clamp(30px, 4.6vw, 96px); line-height: 0.98; font-weight: 700; letter-spacing: -0.035em; text-wrap: wrap; text-align: left; -webkit-hyphens: none; hyphens: none; color: #FFFFFF; mix-blend-mode: difference;">I'm Alessandro, a visual &amp; motion designer based <span style="white-space: nowrap;">in Venice</span>, crafting motion for exhibitions and brands.</h1>
+            <h1 id="heroTitle" style="margin: 0; width: 100%; font-size: clamp(30px, 4.6vw, 96px); line-height: 0.98; font-weight: 600; letter-spacing: -0.035em; text-wrap: wrap; text-align: left; -webkit-hyphens: none; hyphens: none; color: #FFFFFF; mix-blend-mode: difference;">I'm Alessandro, a visual &amp;&nbsp;motion designer based <span style="white-space: nowrap;">in Venice</span>, crafting motion for exhibitions and brands.</h1>
           </div>
         </div>
 
         <div style="display: flex; overflow: hidden; background: #0A0B0C;">
-          <div style="display: flex; gap: 48px; padding: 14px 0; white-space: nowrap; animation: marq 26s linear infinite; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8B9094;">
+          <div style="display: flex; gap: 48px; padding: 14px 0; white-space: nowrap; animation: marq 26s linear infinite; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8B9094;">
             <span>Motion system</span><span>Visual identity</span><span>Editorial design</span><span>Exhibition graphics</span><span>Data visualization</span><span>Motion system</span><span>Visual identity</span><span>Editorial design</span><span>Exhibition graphics</span><span>Data visualization</span>
           </div>
         </div>
 
         <div id="selectedWork" style="scroll-margin-top: 72px; padding: clamp(40px, 7vw, 64px) clamp(18px, 4vw, 40px) 40px; display: flex; flex-direction: column; gap: 28px;">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
             <h2 style="margin: 0; font: inherit;">Selected work</h2>
           </div>
 
@@ -52,11 +53,11 @@
                 <video src="uploads/biennale-cover-13cde54b.mp4" autoplay="" loop="" muted="{{ true }}" playsinline="" style="width: 100%; height: 100%; object-fit: cover;"></video>
               </div>
               <div>
-                <h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em;">61st Venice Art Biennale — Con Te Con Tutto</h3>
-                <p style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Lungomare · Motion designer · 2026</p>
-                  <a href="https://www.instagram.com/p/DVtgVOFCARv/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #4FA6C7;" style-hover="color: #8FD0E4;">Full project <span>→</span></a>
+                <h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.1; font-weight: 500; letter-spacing: -0.01em;">61st Venice Art Biennale<br><span style="white-space: nowrap;">Con Te Con Tutto</span></h3>
+                <p style="margin: 0; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Lungomare<br>Motion designer<br>2026</p>
+                  <a href="https://www.instagram.com/p/DVtgVOFCARv/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #4FA6C7;" style-hover="color: #8FD0E4;">Full project <span>→</span></a>
                 <div data-card-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
-                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; padding-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.65; color: #C9CDCF;">Motion design system for the exhibition <em>Con te con tutto</em>, developed on the visual identity designed by Lungomare. Starting from that identity, I defined the animation rules, title treatments, social formats and web declinations.</p></div>
+                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; padding-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.65; color: #C9CDCF;">Motion design system for the exhibition <em>Con te con tutto</em>, developed on the visual identity designed by Lungomare. Starting from that identity, I defined the animation rules, title treatments, social formats and web declinations.</p></div>
                 </div>
               </div>
             </div>
@@ -65,11 +66,11 @@
                 <video src="uploads/post-Iuav-23486831.mp4" autoplay="" loop="" muted="{{ true }}" playsinline="" style="width: 100%; height: 100%; object-fit: cover;"></video>
               </div>
               <div>
-                <h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em;">Iuav Centenary Motion System</h3>
-                <p style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia · Motion designer · 2026</p>
-                  <a href="https://youtu.be/kTdoOMkznzw" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #4FA6C7;" style-hover="color: #8FD0E4;">Full project <span>→</span></a>
+                <h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.1; font-weight: 500; letter-spacing: -0.01em;">Iuav Centenary Motion System</h3>
+                <p style="margin: 0; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia<br>Motion designer<br>2026</p>
+                  <a href="https://youtu.be/kTdoOMkznzw" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #4FA6C7;" style-hover="color: #8FD0E4;">Full project <span>→</span></a>
                 <div data-card-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
-                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; padding-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.65; color: #C9CDCF;">Motion system for the university's centenary, developed on the existing identity: a set of rules for titles, transitions and data, plus the visual identity for internal events across the year.</p></div>
+                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; padding-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.65; color: #C9CDCF;">Motion system for the university's centenary, developed on the existing identity: a set of rules for titles, transitions and data, plus the visual identity for internal events across the year.</p></div>
                 </div>
               </div>
             </div>
@@ -78,11 +79,11 @@
                 <video src="uploads/loop_luicidly.mp4" autoplay="" loop="" muted="{{ true }}" playsinline="" style="width: 100%; height: 100%; object-fit: cover;"></video>
               </div>
               <div>
-                <h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.1; font-weight: 400; letter-spacing: -0.01em;">Lucidly</h3>
-                <p style="margin: 0; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Master's thesis in Motion Design · 2025</p>
-                  <a href="https://youtu.be/fXlanSRKMYA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #4FA6C7;" style-hover="color: #8FD0E4;">Full project <span>→</span></a>
+                <h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.1; font-weight: 500; letter-spacing: -0.01em;">Lucidly</h3>
+                <p style="margin: 0; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Master's thesis in Motion Design<br>2025</p>
+                  <a href="https://youtu.be/fXlanSRKMYA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #4FA6C7;" style-hover="color: #8FD0E4;">Full project <span>→</span></a>
                 <div data-card-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
-                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; padding-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.65; color: #C9CDCF;">A 60-second commercial for the Lucidly app, built on a visual identity and voice-over already given, covering all of its features. The work moved from script and storyboard to style frames, where the stylistic choices were set. The final video works the colours of the app icon over shades of blue and purple, with 3D elements. Scenes built in After Effects and Cavalry.</p></div>
+                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; padding-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.65; color: #C9CDCF;">A 60-second commercial for the Lucidly app, built on a visual identity and voice-over already given, covering all of its features. The work moved from script and storyboard to style frames, where the stylistic choices were set. The final video works the colours of the app icon over shades of blue and purple, with 3D elements. Scenes built in After Effects and Cavalry.</p></div>
                 </div>
               </div>
             </div>
@@ -91,48 +92,48 @@
           <div id="workList" style="display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid #1F2224;">
             <div data-row="1" data-images="uploads/DSCF2682.jpg,uploads/DSCF2697.jpg,uploads/DSCF2698.jpg,uploads/DSCF2707.jpg,uploads/DSCF2710.jpg" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: padding-left 0.25s ease;" style-hover="padding-left: 14px;">
               <div style="display: flex; flex-direction: column; flex: 1 1 260px; min-width: 0;">
-                <span style="font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Poster for Speed — Motor Racing from 1900 to 1950</span>
+                <span style="font-size: 24px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Poster for Speed — Motor Racing from 1900 to 1950</span>
                 <div data-row-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
-                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; max-width: 560px; padding-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">A thesis tracing the origin of the graphic codes used to represent speed, through the visual communication of Italian motor racing in the first half of the twentieth century. Built on archival primary sources, original posters, photographs, documents, alongside bibliography, to contextualize their cultural and artistic impact. Chronological and thematic structure, typography drawn from the period, and throughout the red assigned to Italian racing cars in the 1930s, cut with flashes of light.</p></div>
+                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; max-width: 560px; padding-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">A thesis tracing the origin of the graphic codes used to represent speed, through the visual communication of Italian motor racing in the first half of the twentieth century. Built on archival primary sources, original posters, photographs, documents, alongside bibliography, to contextualize their cultural and artistic impact. Chronological and thematic structure, typography drawn from the period, and throughout the red assigned to Italian racing cars in the 1930s, cut with flashes of light.</p></div>
                 </div>
               </div>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Master's thesis research</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Research, catalogue</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Master's thesis research</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Research, catalogue</span>
             </div>
             <div data-row="1" data-images="uploads/DSCF5832.JPG,uploads/DSCF5834.JPG,uploads/DSCF5836.JPG,uploads/DSCF5840.JPG,uploads/DSCF5841.JPG,uploads/DSCF5844.JPG" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Made in MiC</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Salone del Mobile 2026</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Catalogue</span>
+              <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Made in MiC</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Salone del Mobile 2026</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Catalogue</span>
             </div>
             <div data-row="1" data-images="uploads/poster_roma-1975+-3713681b.png,uploads/DSCF2427.jpg,uploads/DSCF2505.jpg,uploads/DSCF2387-rot.jpg,uploads/DSCF2512-rot.jpg,uploads/DSCF2394.jpg" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: padding-left 0.25s ease;" style-hover="padding-left: 14px;">
               <div style="display: flex; flex-direction: column; flex: 1 1 260px; min-width: 0;">
-                <span style="font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Roma 1975</span>
+                <span style="font-size: 24px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Roma 1975</span>
                 <div data-row-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
-                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; max-width: 560px; padding-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">Visual identity for the photographic exhibition <em>Roma 1975, città, volti e storie nell'anno giubilare</em>, for the Soprintendenza Speciale di Roma and the Drugstore Museum. The graphic line is built on a condensed sans-serif widely used in 1970s Italy. I handled promotional communication, posters and social, and internal graphics: information panels, captions, decorative artifacts. I also designed the exhibition catalogue, published by Scienze e Lettere, which collects the selected photographs and, through critical essays, reconstructs the historical, demoethnoanthropological, political and cultural context of 1970s Rome.</p></div>
+                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; max-width: 560px; padding-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">Visual identity for the photographic exhibition <em>Roma 1975, città, volti e storie nell'anno giubilare</em>, for the Soprintendenza Speciale di Roma and the Drugstore Museum. The graphic line is built on a condensed sans-serif widely used in 1970s Italy. I handled promotional communication, posters and social, and internal graphics: information panels, captions, decorative artifacts. I also designed the exhibition catalogue, published by Scienze e Lettere, which collects the selected photographs and, through critical essays, reconstructs the historical, demoethnoanthropological, political and cultural context of 1970s Rome.</p></div>
                 </div>
               </div>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Soprintendenza Speciale di Roma</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2025</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, catalogue</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Soprintendenza Speciale di Roma</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2025</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, catalogue</span>
             </div>
             <div data-row="1" data-images="uploads/IMG_5990-2-cab5f51b.jpg,uploads/SOCIAL-Fashion_at_Iuav-1080X1350.mp4" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: padding-left 0.25s ease;" style-hover="padding-left: 14px;">
-              <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Fashion at Iuav 2026</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, motion</span>
+              <span style="flex: 1 1 260px; min-width: 0; font-size: 24px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Fashion at Iuav 2026</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, motion</span>
             </div>
             <div data-row="1" data-images="uploads/01-Def-colorato.mp4,uploads/01-4-5.mp4,uploads/03-4-5-rosso.mp4" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 22px 4px; border-bottom: 1px solid #1F2224; cursor: pointer; transition: padding-left 0.25s ease;" style-hover="padding-left: 14px;">
               <div style="display: flex; flex-direction: column; flex: 1 1 260px; min-width: 0;">
-                <span style="font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Design Show</span>
+                <span style="font-size: 24px; line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif">Design Show</span>
                 <div data-row-desc="1" style="display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;">
-                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; max-width: 560px; padding-top: 10px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">Visual identity for two editions of the Design Show at Università Iuav di Venezia, the exhibition where students present the projects completed over the previous semester. Starting from the existing Career Days identity, rigid and modular, we built a new palette with more organic shapes, to represent the greater freedom of design within the university. I also produced the animations for the university's social channels.</p></div>
+                  <div style="overflow: hidden; min-height: 0;"><p style="margin: 0; max-width: 560px; padding-top: 10px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.7; color: #C9CDCF;">Visual identity for two editions of the Design Show at Università Iuav di Venezia, the exhibition where students present the projects completed over the previous semester. Starting from the existing Career Days identity, rigid and modular, we built a new palette with more organic shapes, to represent the greater freedom of design within the university. I also produced the animations for the university's social channels.</p></div>
                 </div>
               </div>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
-              <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, motion</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">Università Iuav di Venezia</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">2026</span>
+              <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #4FA6C7; text-align: right; margin-left: auto;">Identity, motion</span>
             </div>
           </div>
 
@@ -142,7 +143,7 @@
             <video id="rowPreviewVideo" loop="" muted="{{ true }}" playsinline="" style="width: 100%; height: auto; display: block;"></video>
           </div>
           <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 18px;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(28px, 3.2vw, 44px); font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; color: #F2F1EF;">
               <h2 style="margin: 0; font: inherit;">Lab</h2>
             </div>
             <div id="labGrid" style="display: flex; align-items: flex-start; gap: 10px;">
@@ -164,10 +165,10 @@
 
         <div style="padding: clamp(32px, 6vw, 40px) clamp(18px, 4vw, 40px); border-top: 1px solid #1F2224; display: flex; flex-wrap: wrap; gap: 20px 32px; justify-content: space-between; align-items: flex-end;">
           <div>
-            <p style="margin: 0 0 8px; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8B9094;">Get in touch</p>
-            <a href="mailto:alessandro.rizza31@gmail.com" style="font-size: clamp(22px, 5.2vw, 44px); font-weight: 400; letter-spacing: -0.02em; word-break: break-word; color: #F2F1EF;">alessandro.rizza31@gmail.com</a>
+            <p style="margin: 0 0 8px; font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #8B9094;">Get in touch</p>
+            <a href="mailto:alessandro.rizza31@gmail.com" style="font-weight: 500; font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(22px, 5.2vw, 44px); font-weight: 400; letter-spacing: -0.02em; word-break: break-word; color: #F2F1EF;">alessandro.rizza31@gmail.com</a>
           </div>
-          <span style="font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">© 2026</span>
+          <span style="font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.5px; color: #8B9094;">© 2026</span>
         </div>
 </div>
 </x-dc>
@@ -193,23 +194,52 @@ class Component extends DCLogic {
     this._heroVisible = true;
     new IntersectionObserver(es => es.forEach(e => {
       this._heroVisible = e.isIntersecting;
-      if (e.isIntersecting) v.play().catch(() => {});
-      else v.pause();
+      const cur = this._heroActive || v;
+      if (e.isIntersecting) cur.play().catch(() => {});
+      else cur.pause();
     }), { rootMargin: '200px 0px' }).observe(v);
   }
   cycleHero() {
-    const v = document.getElementById('heroVideo');
-    if (!v || this._heroVisible === false) return;
+    // Two stacked videos: the next clip loads and seeks in the hidden one,
+    // and only swaps in once its first frame is ready, so there is never a black gap.
+    const a = this._heroActive || document.getElementById('heroVideo');
+    if (!a || !a.parentNode || this._heroVisible === false) return;
+    if (this._heroLoading && Date.now() - this._heroLoading < 6000) return;
+    let b = this._heroBack;
+    if (!b) {
+      b = document.createElement('video');
+      b.muted = true; b.defaultMuted = true; b.volume = 0; b.loop = true; b.playsInline = true; b.preload = 'auto';
+      b.setAttribute('muted', ''); b.setAttribute('playsinline', ''); b.setAttribute('aria-hidden', 'true');
+      b.style.cssText = a.style.cssText;
+      b.style.opacity = '0';
+      a.parentNode.insertBefore(b, a.nextSibling);
+      this._heroBack = b;
+    }
     this._i = ((this._i || 0) + 1) % this.heroClips.length;
-    v.src = this.heroClips[this._i];
-    v.muted = true; v.volume = 0; v.loop = true;
-    const seek = () => {
-      const d = v.duration;
-      if (d && isFinite(d)) v.currentTime = Math.random() * Math.max(0, d - 0.5);
-      v.play().catch(() => {});
+    this._heroLoading = Date.now();
+    const touch = this.isTouch();
+    let done = false;
+    const show = () => {
+      if (done) return; done = true;
+      if (!touch) { b.style.opacity = '1'; a.style.opacity = '0'; }
+      this._heroActive = b; this._heroBack = a; this._heroLoading = 0;
+      setTimeout(() => a.pause(), 80);
     };
-    if (v.readyState >= 1) seek();
-    else v.addEventListener('loadedmetadata', seek, { once: true });
+    const start = () => {
+      b.play().catch(() => {});
+      if ('requestVideoFrameCallback' in b) b.requestVideoFrameCallback(() => show());
+      else b.addEventListener('playing', show, { once: true });
+      setTimeout(() => { if (!done && b.readyState >= 2) show(); }, 1500);
+    };
+    b.addEventListener('loadedmetadata', () => {
+      const d = b.duration;
+      if (d && isFinite(d) && d > 1) {
+        b.addEventListener('seeked', start, { once: true });
+        b.currentTime = Math.random() * Math.max(0, d - 0.5);
+      } else start();
+    }, { once: true });
+    b.src = this.heroClips[this._i];
+    b.load();
   }
   layoutLab() {
     const grid = document.getElementById('labGrid');
@@ -300,7 +330,7 @@ class Component extends DCLogic {
       const openLabel = this.isTouch() ? 'Tap to see' : 'View project';
       const closeLabel = this.isTouch() ? 'Tap to close' : 'Close';
       hint.textContent = openLabel;
-      hint.style.cssText = "font-family: 'neue-haas-grotesk-display', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4FA6C7; flex: 1 1 100%;";
+      hint.style.cssText = "font-family: 'neue-haas-grotesk-text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4FA6C7; flex: 1 1 100%;";
       r.insertBefore(hint, gal);
 
       r._closeGallery = () => {
@@ -517,6 +547,33 @@ class Component extends DCLogic {
     h.style.fontSize = (Math.floor(lo * 10) / 10) + 'px';
     this._heroW = h.clientWidth;
   }
+  heroCanvas() {
+    // Mobile browsers (iOS Safari above all) do not blend text over a playing <video>:
+    // mirror the hero video into a canvas, which blending does work over.
+    if (!this.isTouch() || this._heroCv) return;
+    const v = document.getElementById('heroVideo');
+    if (!v || !v.parentNode) return;
+    const c = document.createElement('canvas');
+    c.setAttribute('aria-hidden', 'true');
+    c.style.cssText = 'position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none;';
+    v.parentNode.insertBefore(c, v.nextSibling);
+    v.style.opacity = '0';
+    this._heroCv = c;
+    const ctx = c.getContext('2d');
+    const draw = () => {
+      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const w = Math.round(c.clientWidth * dpr), h = Math.round(c.clientHeight * dpr);
+      if (w && h && (c.width !== w || c.height !== h)) { c.width = w; c.height = h; }
+      const cur = this._heroActive || v;
+      if (cur.readyState >= 2 && cur.videoWidth && c.width) {
+        const s = Math.max(c.width / cur.videoWidth, c.height / cur.videoHeight);
+        const dw = cur.videoWidth * s, dh = cur.videoHeight * s;
+        try { ctx.drawImage(cur, (c.width - dw) / 2, (c.height - dh) / 2, dw, dh); } catch (e) {}
+      }
+      this._heroRaf = requestAnimationFrame(draw);
+    };
+    draw();
+  }
   componentDidMount() {
     this.fitHero();
     const ht = document.getElementById('heroTitle');
@@ -524,6 +581,7 @@ class Component extends DCLogic {
       this._ro = new ResizeObserver(() => { const el = document.getElementById('heroTitle'); if (el && el.clientWidth !== this._heroW) this.fitHero(); });
       this._ro.observe(ht.parentElement);
     }
+    this.heroCanvas();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.fitHero());
     setTimeout(() => this.fitHero(), 600);
     this.layoutLab();
@@ -542,6 +600,8 @@ class Component extends DCLogic {
   }
   componentWillUnmount() {
     clearInterval(this._t); clearInterval(this._hero); clearTimeout(this._rz);
+    if (this._heroRaf) cancelAnimationFrame(this._heroRaf);
+    if (this._ro) this._ro.disconnect();
     if (this._onResize) window.removeEventListener('resize', this._onResize);
   }
   muteLab() {
@@ -563,7 +623,7 @@ class Component extends DCLogic {
         else v.addEventListener('loadedmetadata', jump, { once: true });
         v.addEventListener('ended', () => { v.currentTime = 0; v.play().catch(() => {}); });
       }
-      if (v.paused && v.src && !v.hasAttribute('data-src')) v.play().catch(() => {});
+      if (v.paused && v.src && !v.hasAttribute('data-src') && v !== this._heroBack) v.play().catch(() => {});
     });
   }
   renderVals() { return {}; }
